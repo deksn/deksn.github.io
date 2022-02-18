@@ -28,7 +28,7 @@ function showCars(post){
     }
 }
 
-fetch("https://github.com/deksn/Sunbeam/blob/78603860c860cdfa399f18db6df87275e07f86fd/data.json")
+fetch("deksn.github.io/data.json")
 .then(function (data) { // wait for the server to respond (a promise)
     return data.json();
 })
