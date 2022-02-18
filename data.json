@@ -1,0 +1,22 @@
+{"rentals" :[{
+        "category": "Budget",
+        "persons": 4,
+        "suitcases": 1,
+        "image": "images/Budget.png",
+        "price": 440
+    },
+    {
+        "category": "Standard",
+        "persons": 5,
+        "suitcases": 3,
+        "image": "images/Standard.png",
+        "price": 634
+    },
+    {
+        "category": "Minivan",
+        "persons": 7,
+        "suitcases": 4,
+        "image": "images/Minivan.png",
+        "price": 950
+    }
+]}

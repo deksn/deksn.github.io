@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent a car | SunbeamCars Inc.</title>
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class= "header">
+        <a href="index.html"><h1 class="heading"> SunbeamCars Inc.</h1></a>
+        <div class="login"><i class = "material-icons"> face</i> Log in</div>
+    </header>
+    <div class="flex_container">
+        <form id="form" class="form">
+            <fieldset>
+                <legend>Find the car that suits you</legend>
+                <div class="formelements">
+                    <label for="start">Pick up:</label>
+                    <input type="date" id="start" name="trip-start" value="2022-01-31" min="2022-01-31" max="2023-01-31">
+                </div>
+                <div class="formelements">
+                    <label for="start">Hand in:</label>
+                    <input type="date" id="end" name="trip-end" value="2022-01-31" min="2022-01-31" max="2023-01-31">
+                </div>
+                <div class="formelements">
+                    <label for="persons" class="label">Number of persons:</label>
+                    <input type="number" class="inputfield" min="1" max="7" id="formpersons" required>
+                </div>
+                <div class="formelements">
+                    <label for="suitcases" class="label">Number of suitcases:</label>
+                        <select id="formsuitcases" name="suitcases">
+                          <option value="zero">0 - only a bag</option>
+                          <option value="one">1 suitcase</option>
+                          <option value="two">2 suitcases</option>
+                          <option value="three">3 suitcases</option>
+                          <option value="four">4 suitcases</option>
+                        </select>
+                </div>
+                <div class="formelements">
+                    <button type="submit" id="submit">Search</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div class="rentals">
+        <div id="output"></div>
+        <!-- <div class="card" id="budget">
+            <img class="car" src="images/Budget.png" alt="Ford Fiesta">
+            <div class="card-text"> Category: Budget <br> Persons: 4 <br> Suitcases: 1 <br> Low comfort</div>
+            <div class="booking">440 dkk <br><button type="button">Book Now</button></div>
+        </div>
+        <div class="card" id="standard">
+            <img class="car" src="images/Standard.png" alt="Ford Fiesta">
+            <div class="card-text"> Category: Standard <br> Persons: 5 <br> Suitcases: 3 <br> Medium comfort</div>
+            <div class="booking">634 dkk <br><button type="button">Book Now</button></div>
+        </div>
+        <div class="card" id="minivan">
+            <img class="car" src="images/Minivan.png" alt="Ford Fiesta">
+            <div class="card-text"> Category: Minivan <br> Persons: 7 <br> Suitcases: 4 <br> High comfort</div>
+            <div class="booking">950 dkk <br><button type="button">Book Now</button></div>
+        </div> -->
+    </div>]
+    <script src="javascript.js"></script>
+</body>
+</html>

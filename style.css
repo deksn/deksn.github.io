@@ -1,0 +1,135 @@
+
+  body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: rgba(201, 201, 201, 0.425);
+    
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 32px;  /* Preferred icon size */ 
+  float: right;
+  padding-right: 50px;
+  padding-left: 10px;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+.heading{
+font-size: 32px;
+color: black;
+padding-left: 70px;
+}
+.header{
+  padding: 10px 40px 10px 40px;
+}
+.login {
+
+  float: right;
+  padding-right:50px;
+  margin-top: -50px;
+  font-size: 20px;
+}
+a{
+text-decoration: none;
+width: min-content;
+}
+.flex_container {
+  background-image: url("images/background.jpg");
+    height: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: left;
+    padding-left: 100px;
+    
+}
+
+.formelements {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.formelements button {
+  display: flex;
+    justify-content: center;
+}
+
+.form {
+    align-self: center;
+    background-color: rgba(201, 201, 201, 0.425);
+    opacity: 0.9;
+}
+
+.label {
+    font-size: 15px;
+    display: block;
+    
+}
+
+.inputfield {
+    width: 100%;
+    text-align: right;
+}
+
+.result {
+    text-align: center;
+    margin: 10px 0;
+}
+.card{
+  width: 80%;
+  padding: 10px 50px 30px 50px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: -1px; 
+  border: 2px solid black;
+  
+  background-color: rgba(201, 201, 201, 0.425);
+}
+.card-text {
+  align-items: center;
+  align-content: center;
+  text-align:justify;
+  padding-left: 550px;
+  margin-top: -100px;
+}
+.booking {
+  margin-top: -90px;
+  font-size: 30px;
+  align-content: right;
+  text-align: right;
+}
+.car{
+  align-items: left;
+}
+.rentals{
+  align-content: center;
+  align-items: center;
+  padding-left: 150px;
+  margin-top: 40px;
+  padding-bottom: 20px;
+}
