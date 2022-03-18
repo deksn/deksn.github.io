@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent a car | SunbeamCars Inc.</title>
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class= "header">
+        <a href="index.html"><h1 class="heading"> SunbeamCars Inc.</h1></a>
+        <div class="login"><i class = "material-icons"> face</i> Log in</div>
+        <div class ="sub-page-header"></div>
+    </header>
+    <div class="row">
+        <div class="column-one" >
+         <h2 class="column-heading">Your information</h2> <br>
+    <form id="info-form" class="info-form">
+                <label for="fname" class="form-label">First name</label>
+                <input type="text" id="fname" placeholder="First name" required><br>
+                <label for="lname">Last name</label>
+                <input type="text" id="lname" placeholder="Last name" required><br>
+                <label for="email">Your email</label>
+                <input type="email" id="email" placeholder="Your email" required><br>
+            
+                <label for="street">Street name</label>
+                <input type="text" id="street" placeholder="Street name" required><br>
+                <label for="number/floor">Number/floor</label> 
+                <input type="number" id="number/floor" placeholder="Number/floor" required><br>
+                <label for="postalandcity">Postal code and city</label>
+                <input type="text" id="postalandcity" list="codesandcities" placeholder="Postal code and city" required><br>
+                <label for="addon1"> I am over 18 years old</label>
+                <input type="checkbox" id="addon1" class="addons" required><br>
+            
+        <div class="checkbox-button"><button type="submit" id="submit">Continue</button></div>
+    </form>
+        </div>
+        <div class="column-two">
+          <h2>Rental information</h2>
+          <div id="totaloutput"></div>
+        </div>
+      </div>
+      <datalist id="codesandcities"></datalist>
+    <script src="js/data.js"></script>
+    <script src="js/java3.js"></script>
+</body>
+</html>

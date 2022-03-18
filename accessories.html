@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent a car | SunbeamCars Inc.</title>
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class= "header">
+        <a href="index.html"><h1 class="heading"> SunbeamCars Inc.</h1></a>
+        <div class="login"><i class = "material-icons"> face</i> Log in</div>
+        <div class ="sub-page-header"></div>
+    </header>
+    <div class="row">
+        <div class="column-left" >
+         <h2>Good choice!</h2> <br>
+         <div id="output1"></div>
+          <p>BMW 7 Series</p> <br>
+          <p>Pick-up date: </p>
+          <p>Return date: </p>
+          <p>Rental days: </p><br>
+          <p>Car rental cost: kr</p>
+          <p>incl. VAT</p> 
+        </div>
+        <div class="column-middle">
+          <h2 class ="column-heading">Select accessories (excl. VAT)</h2><br>
+          <form id = "form">
+            <div class="formrow">
+                <div class="form-column1">
+                  <label for="addon1"> Second driver, dkr. 199,00</label>
+                  <input type="checkbox" id="addon1" class="addons" data-item="Second driver" value="199,00" onchange="calculateTotal(this, this.value)"><br>
+                  <label for="addon2"> Child seat (5-12 yr), dkr. 155,00</label>
+                  <input type="checkbox" id="addon2" class="addons" data-item="Child seat (5-12 yr)" value="155,00" onchange="calculateTotal(this, this.value)"><br>
+                  <label for="addon3"> Roadside aid, dkr. 120,00</label>
+                  <input type="checkbox" id="addon3" class="addons" data-item="Roadside aid" value="120,00" onchange="calculateTotal(this, this.value)"><br>
+                  <label for="addon4"> Baby seat (0-1 yr), dkr. 100,00</label>
+                  <input type="checkbox" id="addon4" class="addons" data-item="Baby seat (0-1 yr)" value="100,00" onchange="calculateTotal(this, this.value)"><br>
+                </div>
+                <div class="form-column2">
+                  <label for="addon5"> Child seat (1-4 yr), dkr. 140,00 </label>
+                  <input type="checkbox" id="addon5" class="addons" data-item="Child seat (1-4 yr)" value="140,00" onchange="calculateTotal(this, this.value)"><br>
+                  <label for="addon6"> GPS navigation, dkr. 250,00</label>
+                  <input type="checkbox" id="addon6" class="addons" data-item="GPS navigation" value="250,00" onchange="calculateTotal(this, this.value)"><br>
+                  <label for="addon7"> Snow chains, dkr. 180,00</label>
+                  <input type="checkbox" id="addon7" class="addons" data-item="Snow chains" value="180,00" onchange="calculateTotal(this, this.value)">
+                </div>
+            </div>
+            <div class="checkbox-button"><button type="submit" id="submit">Continue</button></div>
+          </form>
+          <script>
+            let total = 0.00; // Global variable, total starts at zero
+            showTotal(); // Calls function showTotal to show current total
+    
+            // Event handler - check if checkbox is selected or not and 
+            // adjust the total value accordingly
+            function calculateTotal(checkbox, itemprice) {
+                if (checkbox.checked === true) { // If the checkbox is seleted then ...
+                    total = Math.abs(total + parseFloat(itemprice)*1.20);
+                } else { // if it is not selected then ...
+                    total = Math.abs(total - parseFloat(itemprice)*1.20);
+                }
+                showTotal();
+            }
+    
+            // Shows total value on screen
+            function showTotal() {
+                const output = document.getElementById("totaloutput");
+                output.innerText = `TOTAL ${total.toLocaleString("da-DK", {style: "currency", currency: "DKK"})}  incl. VAT`;
+            }
+    
+            const form = document.getElementById("form");
+            form.reset(); // Resets form every time page loads
+            
+            const checkboxes = document.getElementsByClassName("addons"); //Build an object list with checkboxes
+            form.addEventListener("submit", function(e) {
+                e.preventDefault();
+                let addons = []; // Define list
+                for (const checkbox of checkboxes) {
+                    if (checkbox.checked === true) { // If the item is selected ...
+                        addons.push(checkbox.dataset.item + "(dkr. " + checkbox.value + ")"); // add it to the  list.
+                    }
+                }
+    
+                // Stores information in sessionstorage
+                sessionStorage.setItem("addons", JSON.stringify(shoppinglist));
+                sessionStorage.setItem("total", total.toLocaleString("da-DK", {style: "currency",currency: "DKK"}));
+    
+                location.href="info.html"; // Redirect user to page2.html
+            })
+        </script>
+        </div>
+        <div class="column-right">
+          <h2>Your total: </h2>
+          <div id="totaloutput"></div>
+        </div>
+      </div>
+    <script src="js/data.js"></script>
+    <script src="js/java2.js"></script>
+</body>
+</html>

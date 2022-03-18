@@ -26,11 +26,11 @@
                 <legend>Find the car that suits you</legend>
                 <div class="formelements">
                     <label for="start">Pick up:</label>
-                    <input type="date" id="start" name="trip-start" value="2022-01-31" min="2022-01-31" max="2023-01-31">
+                    <input type="date" id="start" name="trip-start" required>
                 </div>
                 <div class="formelements">
-                    <label for="start">Hand in:</label>
-                    <input type="date" id="end" name="trip-end" value="2022-01-31" min="2022-01-31" max="2023-01-31">
+                    <label for="end">Hand in:</label>
+                    <input type="date" id="end" name="trip-end" required>
                 </div>
                 <div class="formelements">
                     <label for="persons" class="label">Number of persons:</label>
@@ -38,12 +38,12 @@
                 </div>
                 <div class="formelements">
                     <label for="suitcases" class="label">Number of suitcases:</label>
-                        <select id="formsuitcases" name="suitcases">
-                          <option value="zero">0 - only a bag</option>
-                          <option value="one">1 suitcase</option>
-                          <option value="two">2 suitcases</option>
-                          <option value="three">3 suitcases</option>
-                          <option value="four">4 suitcases</option>
+                        <select id="formsuitcases" name="suitcases" required>
+                          <option value="0">0 - only a bag</option>
+                          <option value="1">1 suitcase</option>
+                          <option value="2">2 suitcases</option>
+                          <option value="3">3 suitcases</option>
+                          <option value="4">4 suitcases</option>
                         </select>
                 </div>
                 <div class="formelements">
@@ -54,22 +54,8 @@
     </div>
     <div class="rentals">
         <div id="output"></div>
-        <!-- <div class="card" id="budget">
-            <img class="car" src="images/Budget.png" alt="Ford Fiesta">
-            <div class="card-text"> Category: Budget <br> Persons: 4 <br> Suitcases: 1 <br> Low comfort</div>
-            <div class="booking">440 dkk <br><button type="button">Book Now</button></div>
-        </div>
-        <div class="card" id="standard">
-            <img class="car" src="images/Standard.png" alt="Ford Fiesta">
-            <div class="card-text"> Category: Standard <br> Persons: 5 <br> Suitcases: 3 <br> Medium comfort</div>
-            <div class="booking">634 dkk <br><button type="button">Book Now</button></div>
-        </div>
-        <div class="card" id="minivan">
-            <img class="car" src="images/Minivan.png" alt="Ford Fiesta">
-            <div class="card-text"> Category: Minivan <br> Persons: 7 <br> Suitcases: 4 <br> High comfort</div>
-            <div class="booking">950 dkk <br><button type="button">Book Now</button></div>
-        </div> -->
-    </div>]
-    <script src="javascript.js"></script>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/javascript.js"></script>
 </body>
 </html>
